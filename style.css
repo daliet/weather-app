@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #37474f;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "poppins", sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    grid-gap: 1rem;
+    max-width: 800px;
+    width: 100%;
+    background-color: #232931;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.img-section {
+    border-radius: 25px;
+    background-image: url('./img/image.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.img-section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #5c6bc0 10%, #0d47a1 100%);
+    opacity: 0.2;
+    z-index: -1;
+    border-radius: 25px;
+}
+
+.default-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.default-info img {
+    width: 80%;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.default-info h2 {
+    font-size: 3rem;
+}
+
+.default-info h3 {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+
+.weather-temp {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+/* content-section */
+.content-section {
+    padding: 1.5rem;
+}
+
+.content-section form {
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.content-section form input {
+    width: 85%;
+    padding: 0.7rem 1rem;
+    outline: none;
+    background: transparent;
+    font-size: 1.2rem;
+    color: #fff;
+    font-family: inherit;
+    border: 1px solid #37474f;
+    border-radius: 5px;
+}
+
+
+.content-section form button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem 0.7rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 0.8rem;
+    font-family: inherit;
+    outline: none;
+    background-color: #5c6bc0;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+.day-info .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 0;
+}
+
+.day-info .content title {
+    font-weight: 600;
+}
+
